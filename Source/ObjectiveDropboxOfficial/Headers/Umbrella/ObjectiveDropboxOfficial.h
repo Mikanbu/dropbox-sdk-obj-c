@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IOS
 #import <SafariServices/SafariServices.h>
 #import <UIKit/UIKit.h>
 #elif TARGET_OS_MAC
@@ -28,7 +28,7 @@ FOUNDATION_EXPORT const unsigned char ObjectiveDropboxOfficialVersionString[];
 
 #import <ObjectiveDropboxOfficial/DBSDKImportsShared.h>
 
-#if TARGET_OS_IPHONE
+#if TARGET_OS_IOS
 #import <ObjectiveDropboxOfficial/DBSDKImports-iOS.h>
 #elif TARGET_OS_MAC
 #import <ObjectiveDropboxOfficial/DBSDKImports-macOS.h>
