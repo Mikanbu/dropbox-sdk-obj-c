@@ -175,6 +175,13 @@ static DBOAuthManager *s_sharedOAuthManager;
   NSString *state = [[NSProcessInfo processInfo] globallyUniqueString];
   [[NSUserDefaults standardUserDefaults] setValue:state forKey:kCSERFKey];
 
+    //these checks are not ok but I can't reproduce why these would be nil so at least we don't crash the app here
+    if (!_appKey) {
+        _appKey = @"";
+    }
+    if (!_redirectURL){
+        _redirectURL = [NSURL new];
+    }
   components.queryItems = @[
     [NSURLQueryItem queryItemWithName:@"response_type" value:@"token"],
     [NSURLQueryItem queryItemWithName:@"client_id" value:_appKey],
